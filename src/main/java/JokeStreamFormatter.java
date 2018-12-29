@@ -14,6 +14,8 @@ public class JokeStreamFormatter {
     }
 
     List<String> getNewJokes(int howMuch){
+        //jokeRetriever.getJoke();
+       // history.getHistory();
         return null;
     }
 }
