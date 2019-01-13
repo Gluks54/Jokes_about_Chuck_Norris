@@ -1,7 +1,5 @@
 package History;
 
-import com.sun.javafx.binding.StringFormatter;
-
 public class Joke {
     String id;
     String value;
