@@ -1,7 +1,7 @@
 package AddOptWithDb;
 
 public class CheckHystoryId {
-    private boolean CheckHyst(String id){
+    public boolean CheckHyst(String id){
         return false;
     }
 
