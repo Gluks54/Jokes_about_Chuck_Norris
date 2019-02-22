@@ -1,5 +1,4 @@
 import AddOptWithDb.GetJokesNumberOfTimeAgo;
-import com.sun.javaws.exceptions.InvalidArgumentException;
 import junitparams.JUnitParamsRunner;
 import junitparams.Parameters;
 import org.junit.Before;
@@ -19,12 +18,17 @@ public class GetJokesNumberOfTimeAgoTest {
     }
             @Test
             @Parameters({
-                    "253030",
-                    "246130",
-                    "006061",
-                    "-02349"})
-            public void tetsValidParams(String time){
-        try{getJokesNumberOfTimeAgo.getPeriodOfTimeAgo(time);
+                    "243030,232424",
+                    "236130,232424",
+                    "006061,232424",
+                    "-02349,232424",
+
+                    "232424,253030",
+                    "232424,246130",
+                    "232424,006061",
+                    "232424,-02349"})
+            public void tetsValidParams(String start,String end){
+        try{getJokesNumberOfTimeAgo.getJokes(start,end);
             fail();
         } catch (IllegalArgumentException ex){
             System.out.println(ex);

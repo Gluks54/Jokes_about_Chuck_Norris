@@ -15,8 +15,8 @@ public class DeleteAllJokeTest {
     @Test
     public void testDeletAllJokes(){
         boolean answer = deletAllJokes.deletAll();
-        boolean expected = false;
-        //false case feature of JDBC;
+        boolean expected = true;
+        System.out.println(answer);
         assertEquals(answer,expected);
     }
 }
