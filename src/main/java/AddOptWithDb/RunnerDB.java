@@ -1,8 +1,5 @@
 package AddOptWithDb;
-
-import Joke.RESTJokeRetriever;
 import com.mashape.unirest.http.exceptions.UnirestException;
-
 import java.sql.SQLException;
 import java.util.ArrayList;
 
@@ -17,27 +14,34 @@ public class RunnerDB {
         GetJokesNumberOfTimeAgo getJokesNumberOfTimeAgo = new GetJokesNumberOfTimeAgo();
         NewJoke newJoke = new NewJoke();
 
-//        System.out.println("GetNewJokes:\n");
-//        ArrayList<String> ArrNewJokes = newJoke.getJoke("10");
-//        for(String i: ArrNewJokes){
-//            System.out.println(i);
-//        }
-//
-//        System.out.println("\n All jokes in DB:\n");
-//        ArrayList<String> tempAllJokes = allJokes.GetAllJokes();
-//        for(String i: tempAllJokes){
-//            System.out.println(i);
-//        }
-        System.out.println("\n GetNumberOfJokes:\n");
-        ArrayList<String> tempNumberOfJokes = getLastNumberOFJokes.getLustJokes("5");
+        System.out.println("GetNewJokes:\n");
+        ArrayList<String> arrNewJokes = newJoke.getJoke("10");
+        for(String i: arrNewJokes){
+            System.out.println(i);
+        }
+
+        System.out.println("\n All jokes from DB:\n");
+        ArrayList<String> tempAllJokes = allJokes.GetAllJokes();
+        for(String i: tempAllJokes){
+            System.out.println(i);
+        }
+        System.out.println("\n GetLustNumberOfJokes:\n");
+        ArrayList<String> tempNumberOfJokes = getLastNumberOFJokes.getLustJokes("3");
         for(String i: tempNumberOfJokes){
             System.out.println(i);
         }
 
-        //System.out.println(getJokesNumberOfTimeAgo.getJokes("220030","240000"));
+//        HHmmss -> time format
+        System.out.println("\n Get jokes between two points of time:\n");
+        ArrayList<String> tempTwoPointArr = getJokesNumberOfTimeAgo.getJokes("125030","130000");
+        for(String i: tempTwoPointArr) {
+            System.out.println(i);
+        }
 
-
-
-
+        System.out.println("\n Delete All jokes :\n");
+        if(deletAllJokes.deletAll()){
+            System.out.println("Operation delete all jokes complete successfully");
+        }else {System.out.println("Operation incomplete");
+        }
     }
 }

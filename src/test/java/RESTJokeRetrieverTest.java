@@ -1,4 +1,4 @@
-import History.Joke;
+
 import com.mashape.unirest.http.exceptions.UnirestException;
 import org.junit.Before;
 import org.junit.Test;

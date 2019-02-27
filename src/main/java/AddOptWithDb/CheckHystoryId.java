@@ -13,7 +13,6 @@ public class CheckHystoryId {
 
             preparedStatement.setString(1, id);
             ResultSet resultSet = preparedStatement.executeQuery();
-            System.out.println(resultSet.findColumn("idHash"));
             if (resultSet.next()) {
                 return true;
             }

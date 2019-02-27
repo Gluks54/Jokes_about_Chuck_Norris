@@ -7,12 +7,9 @@ import junitparams.Parameters;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-
 import java.sql.SQLException;
-import java.util.ArrayList;
-
-import static junit.framework.TestCase.assertEquals;
 import static junit.framework.TestCase.fail;
+
 @RunWith(JUnitParamsRunner.class)
 public class NewJokeTest {
     NewJoke newJoke;

@@ -8,7 +8,7 @@ public class AllJokes {
     public ArrayList<String>  GetAllJokes (){
 
         ArrayList<String> tempArr = new ArrayList<>();
-        String query = "SELECT * FROM jokText";
+        String query = "SELECT textOfJoke FROM jokText";
 
         try (Connection connection
                      = DriverManager.getConnection(

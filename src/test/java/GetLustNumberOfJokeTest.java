@@ -45,7 +45,6 @@ public class GetLustNumberOfJokeTest {
 
         int expected = 3;
         ArrayList<String> answer = getLastNumberOFJokes.getLustJokes("3");
-        System.out.println(answer);
         assertEquals(expected,answer.size());
     }
 }

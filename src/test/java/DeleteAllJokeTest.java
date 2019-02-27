@@ -16,7 +16,6 @@ public class DeleteAllJokeTest {
     public void testDeletAllJokes(){
         boolean answer = deletAllJokes.deletAll();
         boolean expected = true;
-        System.out.println(answer);
         assertEquals(answer,expected);
     }
 }

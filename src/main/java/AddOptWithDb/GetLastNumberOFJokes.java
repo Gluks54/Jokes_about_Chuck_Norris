@@ -14,7 +14,8 @@ public class GetLastNumberOFJokes {
         if(matcher.find()){
             throw new IllegalArgumentException();
         }
-        String query = String.format("SELECT textOfJoke FROM jokText ORDER BY id desc LIMIT %s;",number);
+        String query = String.format("SELECT textOfJoke " +
+                "FROM jokText ORDER BY id desc LIMIT %s;",number);
         ArrayList<String> tempArr = new ArrayList<>();
 
         try (

@@ -19,10 +19,10 @@ public class GetJokesNumberOfTimeAgo{
             throw new IllegalArgumentException();
         }
         ArrayList<String> tempArr = new ArrayList<>();
-//        HHmmss
-        String query = "SELECT textOfJoke  FROM jokeText WHERE actionTime BETWEEN" +
+
+        String query = "SELECT textOfJoke  FROM jokText WHERE actionTime BETWEEN" +
                 "\t"+ start +"\t"+"AND"+ "\t"+end ;
-        System.out.println(query);
+
         try (Connection connection
                         = DriverManager.getConnection(
                         DataForDB.getUrl(), DataForDB.getRoot(), DataForDB.getPass())) {
@@ -30,7 +30,7 @@ public class GetJokesNumberOfTimeAgo{
             ResultSet resultSet = statement.executeQuery(query);
 
             while (resultSet.next()){
-                        tempArr.add(resultSet.getString("jokeText"));
+                        tempArr.add(resultSet.getString("textOfJoke"));
             }
         } catch (
                 SQLException ex) {
