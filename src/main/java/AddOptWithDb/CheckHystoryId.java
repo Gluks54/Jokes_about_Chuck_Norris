@@ -4,7 +4,7 @@ import java.sql.*;
 
 public class CheckHystoryId {
     public boolean CheckHyst(String id) throws SQLException {
-        String query = "SELECT id FROM jokes WHERE id = ?";
+        String query = "SELECT idHash FROM jokid WHERE idHash = ?";
 
         try (Connection connection
                      = DriverManager.getConnection(
@@ -13,7 +13,8 @@ public class CheckHystoryId {
 
             preparedStatement.setString(1, id);
             ResultSet resultSet = preparedStatement.executeQuery();
-            if (resultSet.next() == true) {
+            System.out.println(resultSet.findColumn("idHash"));
+            if (resultSet.next()) {
                 return true;
             }
         } catch (SQLException e) {

@@ -7,22 +7,21 @@ import java.sql.*;
 public class SaveJoke{
 
     public boolean saveJokeWithId(String id, String joke){
-        String query = "INSERT INTO jokes(id,joke,addTime)\n" +
-                "VALUE (?,?,CURRENT_TIME());";
+        String queryID =  "INSERT  jokid(idHash) VALUE (?);";
+        String queryJoke = "INSERT  joktext (textOfJoke,actionTime) VALUE  (?,CURRENT_TIME());";
         try (
                 Connection connection =
                         DriverManager.getConnection(DataForDB.getUrl(), DataForDB.getRoot(), DataForDB.getPass());
-             PreparedStatement preparedStatement = connection.prepareStatement(query)){
+             PreparedStatement preparedStatementID = connection.prepareStatement(queryID);
+             PreparedStatement preparedStatementJoke = connection.prepareStatement(queryJoke)){
 
-            preparedStatement.setString(1,id);
-            preparedStatement.setString(2,joke);
+            preparedStatementID.setString(1,id);
+            preparedStatementJoke.setString(1,joke);
 
-            if(preparedStatement.execute() == false){return true;}
+            if(preparedStatementID.execute() == false && preparedStatementJoke.execute() == false  ){return true;}
         }catch (SQLException e){
             System.out.println(e);
         }
         return false;
     }
-
-
 }

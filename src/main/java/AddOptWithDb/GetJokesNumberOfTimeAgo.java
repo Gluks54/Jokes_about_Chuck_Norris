@@ -15,12 +15,12 @@ public class GetJokesNumberOfTimeAgo{
         Matcher matcherStart = pattern.matcher(start);
         Matcher matcherEnd = pattern.matcher(end);
 
-        while(!matcherStart.find() || !matcherEnd.find()){
+        if (!matcherStart.find() || !matcherEnd.find()){
             throw new IllegalArgumentException();
         }
         ArrayList<String> tempArr = new ArrayList<>();
 //        HHmmss
-        String query = "SELECT * FROM jokes WHERE addTime BETWEEN" +
+        String query = "SELECT textOfJoke  FROM jokeText WHERE actionTime BETWEEN" +
                 "\t"+ start +"\t"+"AND"+ "\t"+end ;
         System.out.println(query);
         try (Connection connection
@@ -30,7 +30,7 @@ public class GetJokesNumberOfTimeAgo{
             ResultSet resultSet = statement.executeQuery(query);
 
             while (resultSet.next()){
-                        tempArr.add(resultSet.getString("joke"));
+                        tempArr.add(resultSet.getString("jokeText"));
             }
         } catch (
                 SQLException ex) {

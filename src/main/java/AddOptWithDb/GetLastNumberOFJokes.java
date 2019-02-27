@@ -11,10 +11,10 @@ public class GetLastNumberOFJokes {
         Pattern pattern = Pattern.compile("\\D");
         Matcher matcher = pattern.matcher(number);
 
-        while(matcher.find()){
+        if(matcher.find()){
             throw new IllegalArgumentException();
         }
-        String query = String.format("SELECT joke FROM jokes LIMIT %s",number);
+        String query = String.format("SELECT textOfJoke FROM jokText ORDER BY id desc LIMIT %s;",number);
         ArrayList<String> tempArr = new ArrayList<>();
 
         try (
@@ -25,7 +25,7 @@ public class GetLastNumberOFJokes {
             ResultSet resultSet = statement.executeQuery(query);
 
             while (resultSet.next()) {
-                        tempArr.add(resultSet.getString("joke"));
+                        tempArr.add(resultSet.getString("textOfJoke"));
             }
         }catch(SQLException ex){
             System.out.println(ex);

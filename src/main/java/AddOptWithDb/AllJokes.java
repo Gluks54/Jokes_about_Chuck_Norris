@@ -8,7 +8,7 @@ public class AllJokes {
     public ArrayList<String>  GetAllJokes (){
 
         ArrayList<String> tempArr = new ArrayList<>();
-        String query = "SELECT * FROM jokes";
+        String query = "SELECT * FROM jokText";
 
         try (Connection connection
                      = DriverManager.getConnection(
@@ -17,7 +17,7 @@ public class AllJokes {
             ResultSet resultSet = statement.executeQuery(query);
 
             while (resultSet.next()) {
-                tempArr.add(resultSet.getString("joke"));
+                tempArr.add(resultSet.getString("textOfJoke"));
             }
         } catch(SQLException ex){
             System.out.println(ex);}
