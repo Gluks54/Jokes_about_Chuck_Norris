@@ -17,6 +17,7 @@ public class SaveJoke{
 
             preparedStatementID.setString(1,id);
             preparedStatementJoke.setString(1,joke);
+            System.out.println(DataForDB.getUrl());
 
             if(preparedStatementID.execute() == false && preparedStatementJoke.execute() == false  ){return true;}
         }catch (SQLException e){
