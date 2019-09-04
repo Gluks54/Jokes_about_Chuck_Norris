@@ -14,37 +14,41 @@ import static junit.framework.TestCase.fail;
 
 @RunWith(JUnitParamsRunner.class)
 public class GetLustNumberOfJokeTest {
-   GetLastNumberOFJokes getLastNumberOFJokes;
+    GetLastNumberOFJokes getLastNumberOFJokes;
     DeletAllJokes deletAllJokes;
     SaveJoke saveJoke;
-   @Before
-    public void SetUp(){
+
+    @Before
+    public void SetUp() {
         getLastNumberOFJokes = new GetLastNumberOFJokes();
         deletAllJokes = new DeletAllJokes();
 
         saveJoke = new SaveJoke();
     }
+
     @Test
     @Parameters({
             "-1",
             "-",
             "d"})
-    public void tetsValidParams(String number){
-        try{getLastNumberOFJokes.getLustJokes(number);
+    public void tetsValidParams(String number) {
+        try {
+            getLastNumberOFJokes.getLustJokes(number);
             fail();
-        } catch (IllegalArgumentException ex){
+        } catch (IllegalArgumentException ex) {
             System.out.println(ex);
         }
     }
+
     @Test
-    public void testNumberOfJoke(){
+    public void testNumberOfJoke() {
         deletAllJokes.deletAll();
-        saveJoke.saveJokeWithId("1","First joke");
-        saveJoke.saveJokeWithId("2","second joke");
-        saveJoke.saveJokeWithId("3","third joke");
+        saveJoke.saveJokeWithId("1", "First joke");
+        saveJoke.saveJokeWithId("2", "second joke");
+        saveJoke.saveJokeWithId("3", "third joke");
 
         int expected = 3;
         ArrayList<String> answer = getLastNumberOFJokes.getLustJokes("3");
-        assertEquals(expected,answer.size());
+        assertEquals(expected, answer.size());
     }
 }

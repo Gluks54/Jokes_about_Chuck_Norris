@@ -24,8 +24,9 @@ public class JokeStreamFormatterTest {
 
     FileHistory fileHistory;
     JokeRetriever jokeRetriever;
+
     @Before
-    public void setUp(){
+    public void setUp() {
         fileHistory = new FileHistory();
     }
 
@@ -56,7 +57,7 @@ public class JokeStreamFormatterTest {
         //Behavior
         when(jokeRetriever.getJoke()).thenReturn(joke1).thenReturn(joke2).thenReturn(joke3).thenReturn(joke4);
 
-        JokeStreamFormatter jokeStreamFormatter = new JokeStreamFormatter(fileHistory,jokeRetriever);
+        JokeStreamFormatter jokeStreamFormatter = new JokeStreamFormatter(fileHistory, jokeRetriever);
         List<String> actual = jokeStreamFormatter.getNewJokes(4);
 
         List<String> expectedArr = new ArrayList<>();

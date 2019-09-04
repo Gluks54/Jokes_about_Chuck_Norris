@@ -7,15 +7,16 @@ import static junit.framework.TestCase.assertTrue;
 
 public class DeleteAllJokeTest {
     DeletAllJokes deletAllJokes;
+
     @Before
-    public void SetUp(){
+    public void SetUp() {
         deletAllJokes = new DeletAllJokes();
     }
 
     @Test
-    public void testDeletAllJokes(){
+    public void testDeletAllJokes() {
         boolean answer = deletAllJokes.deletAll();
         boolean expected = true;
-        assertEquals(answer,expected);
+        assertEquals(answer, expected);
     }
 }

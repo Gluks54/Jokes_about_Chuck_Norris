@@ -22,6 +22,6 @@ public class Joke {
 
     @Override
     public String toString() {
-        return String.format("id:%1$s Value:%2$s",this.id,this.value);
+        return String.format("id:%1$s Value:%2$s", this.id, this.value);
     }
 }

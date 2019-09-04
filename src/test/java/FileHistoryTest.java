@@ -20,7 +20,7 @@ public class FileHistoryTest {
     private FileHistory fileHistory;
 
     @Before
-    public void setUp(){
+    public void setUp() {
         fileHistory = new FileHistory();
     }
 
@@ -35,21 +35,22 @@ public class FileHistoryTest {
         actualSet.add("qLLJSXmMQp2iNxpI2Ht7DA");
         actualSet.add("CvhhOm7nRUaHAHBGXmzr9w");
         actualSet.add("gs8GGfRfRAiMvmdeP2Mg9A");
-        //we are cleaning document
+
         PrintWriter writer = new PrintWriter("History.txt");
         writer.print("");
         writer.close();
-                         //write to file
-       Iterator<String> setIterator = actualSet.iterator();
-       while (setIterator.hasNext()){
-           String temp = setIterator.next();
-           String formString = String.format("%1$s\n",temp);
-           WriteFile.writeByte(formString.getBytes());
-       }
-       assertTrue(actualSet.containsAll(fileHistory.getHistory()));
+
+        Iterator<String> setIterator = actualSet.iterator();
+        while (setIterator.hasNext()) {
+            String temp = setIterator.next();
+            String formString = String.format("%1$s\n", temp);
+            WriteFile.writeByte(formString.getBytes());
+        }
+        assertTrue(actualSet.containsAll(fileHistory.getHistory()));
     }
+
     @Test
-    public  void testSaveHistory() throws FileNotFoundException {
+    public void testSaveHistory() throws FileNotFoundException {
         Set<String> actualSet = new HashSet<>();
         actualSet.add("fA3419VUSBCpv-KacF1A_g");
         actualSet.add("mDB0bXSeTqCUr6fdS3c-lQ");
@@ -59,7 +60,7 @@ public class FileHistoryTest {
         actualSet.add("qLLJSXmMQp2iNxpI2Ht7DA");
         actualSet.add("CvhhOm7nRUaHAHBGXmzr9w");
         actualSet.add("gs8GGfRfRAiMvmdeP2Mg9A");
-        //we are cleaning document
+
         PrintWriter writer = new PrintWriter("History.txt");
         writer.print("");
         writer.close();

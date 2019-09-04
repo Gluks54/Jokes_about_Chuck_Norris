@@ -13,8 +13,7 @@ public class WriteFile {
     public static void writeByte(byte[] bytes) {
         try {
             Files.write(Paths.get("History.txt"), bytes, StandardOpenOption.APPEND);
-        }
-        catch (IOException e) {
+        } catch (IOException e) {
             System.out.println(e);
         }
     }

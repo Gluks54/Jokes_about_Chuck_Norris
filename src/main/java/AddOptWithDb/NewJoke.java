@@ -15,7 +15,7 @@ public class NewJoke {
         Pattern pattern = Pattern.compile("\\D");
         Matcher matcher = pattern.matcher(numberOfJokes);
 
-        if(matcher.find()){
+        if (matcher.find()) {
             throw new IllegalArgumentException();
         }
 
@@ -28,13 +28,13 @@ public class NewJoke {
         ArrayList<String> temArr = new ArrayList<>();
         Joke joke;
 
-        while (temArr.size() <= (intNumb - 1)){
-           joke = restJokeRetriever.getJoke();
-           boolean answerFromDB = checkHystoryId.CheckHyst(joke.getId());
-           if(!answerFromDB){
-               saveJoke.saveJokeWithId(joke.getId(),joke.getValue());
-               temArr.add(joke.getValue());
-           }
+        while (temArr.size() <= (intNumb - 1)) {
+            joke = restJokeRetriever.getJoke();
+            boolean answerFromDB = checkHystoryId.CheckHyst(joke.getId());
+            if (!answerFromDB) {
+                saveJoke.saveJokeWithId(joke.getId(), joke.getValue());
+                temArr.add(joke.getValue());
+            }
         }
         return temArr;
     }

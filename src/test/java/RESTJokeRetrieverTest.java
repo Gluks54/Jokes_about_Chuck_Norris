@@ -3,12 +3,14 @@ import com.mashape.unirest.http.exceptions.UnirestException;
 import org.junit.Before;
 import org.junit.Test;
 import Joke.*;
+
 import static junit.framework.TestCase.assertTrue;
 
 public class RESTJokeRetrieverTest {
     RESTJokeRetriever restJokeRetriever;
+
     @Before
-    public void setUp(){
+    public void setUp() {
         restJokeRetriever = new RESTJokeRetriever();
     }
 
