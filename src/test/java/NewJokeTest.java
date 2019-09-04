@@ -1,6 +1,6 @@
-import AddOptWithDb.DeletAllJokes;
-import AddOptWithDb.NewJoke;
-import AddOptWithDb.SaveJoke;
+import com.pl.jokes_about_chuck_norris.AddOptWithDb.DeletAllJokes;
+import com.pl.jokes_about_chuck_norris.AddOptWithDb.NewJoke;
+import com.pl.jokes_about_chuck_norris.AddOptWithDb.SaveJoke;
 import com.mashape.unirest.http.exceptions.UnirestException;
 import junitparams.JUnitParamsRunner;
 import junitparams.Parameters;

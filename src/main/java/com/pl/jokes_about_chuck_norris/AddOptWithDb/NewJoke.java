@@ -1,7 +1,7 @@
-package AddOptWithDb;
+package com.pl.jokes_about_chuck_norris.AddOptWithDb;
 
-import History.Joke;
-import Joke.RESTJokeRetriever;
+import com.pl.jokes_about_chuck_norris.History.Joke;
+import com.pl.jokes_about_chuck_norris.Joke.RESTJokeRetriever;
 import com.mashape.unirest.http.exceptions.UnirestException;
 
 import java.sql.SQLException;
@@ -38,5 +38,4 @@ public class NewJoke {
         }
         return temArr;
     }
-
 }

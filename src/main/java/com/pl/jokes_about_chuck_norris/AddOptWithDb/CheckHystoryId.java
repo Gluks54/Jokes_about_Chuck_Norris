@@ -1,9 +1,9 @@
-package AddOptWithDb;
+package com.pl.jokes_about_chuck_norris.AddOptWithDb;
 
 import java.sql.*;
 
 public class CheckHystoryId {
-    public boolean CheckHyst(String id) throws SQLException {
+    public boolean CheckHyst(String id) {
         String query = "SELECT idHash FROM jokid WHERE idHash = ?";
 
         try (Connection connection

@@ -1,8 +1,9 @@
-import History.FileHistory;
-import History.Joke;
-import Joke.JokeRetriever;
-import Joke.RESTJokeRetriever;
+import com.pl.jokes_about_chuck_norris.History.FileHistory;
+import com.pl.jokes_about_chuck_norris.History.Joke;
+import com.pl.jokes_about_chuck_norris.Joke.JokeRetriever;
+import com.pl.jokes_about_chuck_norris.Joke.RESTJokeRetriever;
 import com.mashape.unirest.http.exceptions.UnirestException;
+import com.pl.jokes_about_chuck_norris.JokeStreamFormatter;
 import junitparams.JUnitParamsRunner;
 import org.junit.Before;
 import org.junit.Test;
@@ -12,7 +13,6 @@ import org.mockito.Mockito;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
 
 import static junit.framework.TestCase.assertEquals;
@@ -33,7 +33,7 @@ public class JokeStreamFormatterTest {
     @Test
     public void testJokeStreamFormatter() throws UnirestException, IOException {
         //Cleaning up history
-        PrintWriter writer = new PrintWriter("History.txt");
+        PrintWriter writer = new PrintWriter("com.pl.jokes_about_chuck_norris.History.txt");
         writer.print("");
         writer.close();
         // Fake object

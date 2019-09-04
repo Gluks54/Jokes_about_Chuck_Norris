@@ -1,4 +1,4 @@
-package History;
+package com.pl.jokes_about_chuck_norris.History;
 
 import java.io.IOException;
 import java.util.Iterator;
@@ -10,7 +10,7 @@ public class FileHistory implements History {
 
     @Override
     public Set<String> getHistory() throws IOException {
-        String readFile = ReadFile.readFile("History.txt");
+        String readFile = ReadFile.readFile("com.pl.jokes_about_chuck_norris.History.txt");
         String[] parsReadFile = readFile.split("\\s");
         return Stream.of(parsReadFile).collect(Collectors.toSet());
 

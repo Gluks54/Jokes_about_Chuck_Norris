@@ -1,4 +1,4 @@
-import AddOptWithDb.DeletAllJokes;
+import com.pl.jokes_about_chuck_norris.AddOptWithDb.DeletAllJokes;
 import org.junit.Before;
 import org.junit.Test;
 

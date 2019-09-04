@@ -1,4 +1,4 @@
-package History;
+package com.pl.jokes_about_chuck_norris.History;
 
 import java.io.File;
 import java.io.IOException;

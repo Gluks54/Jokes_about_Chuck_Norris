@@ -1,8 +1,9 @@
-package AddOptWithDb;
+package com.pl.jokes_about_chuck_norris.AddOptWithDb;
 
-import History.History;
-
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
 
 
 public class SaveJoke {

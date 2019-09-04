@@ -1,4 +1,4 @@
-package AddOptWithDb;
+package com.pl.jokes_about_chuck_norris.AddOptWithDb;
 
 import java.sql.CallableStatement;
 import java.sql.Connection;

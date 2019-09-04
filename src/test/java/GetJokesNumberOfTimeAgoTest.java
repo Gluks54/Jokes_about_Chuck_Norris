@@ -1,4 +1,4 @@
-import AddOptWithDb.GetJokesNumberOfTimeAgo;
+import com.pl.jokes_about_chuck_norris.AddOptWithDb.GetJokesNumberOfTimeAgo;
 import junitparams.JUnitParamsRunner;
 import junitparams.Parameters;
 import org.junit.Before;

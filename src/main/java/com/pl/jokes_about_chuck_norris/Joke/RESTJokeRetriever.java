@@ -1,6 +1,6 @@
-package Joke;
+package com.pl.jokes_about_chuck_norris.Joke;
 
-import History.Joke;
+import com.pl.jokes_about_chuck_norris.History.Joke;
 import com.google.gson.Gson;
 import com.mashape.unirest.http.Unirest;
 import com.mashape.unirest.http.exceptions.UnirestException;

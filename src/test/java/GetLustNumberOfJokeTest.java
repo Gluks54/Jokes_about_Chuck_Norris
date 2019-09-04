@@ -1,6 +1,6 @@
-import AddOptWithDb.DeletAllJokes;
-import AddOptWithDb.GetLastNumberOFJokes;
-import AddOptWithDb.SaveJoke;
+import com.pl.jokes_about_chuck_norris.AddOptWithDb.DeletAllJokes;
+import com.pl.jokes_about_chuck_norris.AddOptWithDb.GetLastNumberOFJokes;
+import com.pl.jokes_about_chuck_norris.AddOptWithDb.SaveJoke;
 import junitparams.JUnitParamsRunner;
 import junitparams.Parameters;
 import org.junit.Before;

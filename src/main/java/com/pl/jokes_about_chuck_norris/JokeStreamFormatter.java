@@ -1,5 +1,8 @@
-import History.*;
-import Joke.JokeRetriever;
+package com.pl.jokes_about_chuck_norris;
+
+import com.pl.jokes_about_chuck_norris.History.History;
+import com.pl.jokes_about_chuck_norris.History.Joke;
+import com.pl.jokes_about_chuck_norris.Joke.JokeRetriever;
 import com.mashape.unirest.http.exceptions.UnirestException;
 
 import java.io.IOException;

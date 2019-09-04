@@ -1,6 +1,5 @@
-import History.FileHistory;
-import History.ReadFile;
-import History.WriteFile;
+import com.pl.jokes_about_chuck_norris.History.FileHistory;
+import com.pl.jokes_about_chuck_norris.History.WriteFile;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -10,8 +9,6 @@ import java.io.PrintWriter;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Set;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 import static junit.framework.TestCase.assertTrue;
 
@@ -36,7 +33,7 @@ public class FileHistoryTest {
         actualSet.add("CvhhOm7nRUaHAHBGXmzr9w");
         actualSet.add("gs8GGfRfRAiMvmdeP2Mg9A");
 
-        PrintWriter writer = new PrintWriter("History.txt");
+        PrintWriter writer = new PrintWriter("com.pl.jokes_about_chuck_norris.History.txt");
         writer.print("");
         writer.close();
 
@@ -61,7 +58,7 @@ public class FileHistoryTest {
         actualSet.add("CvhhOm7nRUaHAHBGXmzr9w");
         actualSet.add("gs8GGfRfRAiMvmdeP2Mg9A");
 
-        PrintWriter writer = new PrintWriter("History.txt");
+        PrintWriter writer = new PrintWriter("com.pl.jokes_about_chuck_norris.History.txt");
         writer.print("");
         writer.close();
 

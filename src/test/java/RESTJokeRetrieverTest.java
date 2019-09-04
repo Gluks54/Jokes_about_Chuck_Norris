@@ -2,7 +2,7 @@
 import com.mashape.unirest.http.exceptions.UnirestException;
 import org.junit.Before;
 import org.junit.Test;
-import Joke.*;
+import com.pl.jokes_about_chuck_norris.Joke.*;
 
 import static junit.framework.TestCase.assertTrue;
 

@@ -1,9 +1,7 @@
-package AddOptWithDb;
+package com.pl.jokes_about_chuck_norris.AddOptWithDb;
 
 import java.sql.*;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 

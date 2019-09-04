@@ -1,6 +1,6 @@
-import AddOptWithDb.CheckHystoryId;
-import AddOptWithDb.DeletAllJokes;
-import AddOptWithDb.SaveJoke;
+import com.pl.jokes_about_chuck_norris.AddOptWithDb.CheckHystoryId;
+import com.pl.jokes_about_chuck_norris.AddOptWithDb.DeletAllJokes;
+import com.pl.jokes_about_chuck_norris.AddOptWithDb.SaveJoke;
 import org.junit.Before;
 import org.junit.Test;
 
